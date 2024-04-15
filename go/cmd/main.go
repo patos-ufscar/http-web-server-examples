@@ -31,7 +31,7 @@ func main() {
 
 	ports := []string{}
 	for _, v := range handlers {
-		ports = append(ports, string(v.Port))
+		ports = append(ports, fmt.Sprint(v.Port))
 	}
 
 	slog.Info(fmt.Sprintf("GoServe Listening on %s", ports))
